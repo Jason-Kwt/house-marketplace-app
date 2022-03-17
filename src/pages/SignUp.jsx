@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+// Toastify message package
+import { toast } from "react-toastify";
+
 // Firebase OAuth
 import {
   getAuth,
@@ -54,7 +57,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      console.log(error);
+      toast.error("Faile to SignUp");
     }
   };
 
