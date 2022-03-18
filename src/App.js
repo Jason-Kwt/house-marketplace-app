@@ -6,12 +6,13 @@ import Offers from "./pages/Offers";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import PrivateRoute from "./components/PrivateRoute";
+import Category from "./pages/Category";
 
 //import Toast message package
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/category/:categoryName" element={<Category />} />
         </Routes>
         <Navbar />
       </Router>
